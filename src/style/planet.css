@@ -1,0 +1,255 @@
+#planet-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 126px;
+    margin-bottom: 87px;
+    padding: 0 11%;
+}
+
+.img-planet{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}.img-planet-img{
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+}.geology-planet{
+    display: none;
+    position: relative;
+    bottom: -180px;
+    width: 163px;
+    height: auto;
+    z-index: 2;
+}.geology{
+    display: block;
+}
+
+.planet-info{
+    width: 350px;
+}.planet-info h1{
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 23px;
+}.planet-info p{
+    margin-bottom: 24px;
+}
+
+.planet-source{
+    margin-bottom: 39px;
+}
+
+.button-planet, .button-planet-active{
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    border: 2px solid #393950;
+    width: 100%;
+    min-width: 270px;
+    height: 48px;
+    background-color: transparent;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    padding: 0 26px;
+
+    margin-bottom: 16px;
+}.button-planet:hover{
+    background-color: #38384F !important;
+    border: 0;
+}.button-num{
+    opacity: 0.5;
+    margin-right: 28px;
+}.button-text{
+    text-transform: uppercase;
+}.button-planet-active{
+    border: 0;
+}
+
+.planet-learn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 11%;
+    margin-bottom: 49px;
+}.planet-item{
+    border: 2px solid #393950;
+    width: 17%;
+    min-width: 210px;
+    height: 128px;
+    margin-right: 30px;
+}#planet-temp{
+    margin-right: 0;
+}.planet-item h4{
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-left: 23px;
+}.planet-item h2{
+    margin: 0;
+    margin-left: 23px;
+}.planet-button-navbar-container{
+    display: none;
+}
+
+@media (max-width: 1200px){
+    #planet-container{
+        margin-top: 0;
+        flex-direction: column;
+        padding: 0 7%;
+    }.img-planet{
+        width: 100%;
+        height: 460px;
+    }.img-planet img{
+        transform: scale(0.6);
+        margin: 0;
+    }.geology-planet{
+        transform: scale(0.6);
+        bottom: -140px;
+    }
+    .planet-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }.planet-info-1{
+        margin-right: 69px;
+    }
+
+    .planet-learn-container{
+        padding: 0 5%;
+    }.planet-item{
+        min-width: 160px;
+        height: 88px;
+        margin-right: 11px;
+    }.planet-item h2{
+        
+        font-size: 24px;
+    }.planet-item h4{
+        font-size: 8px;
+        margin-top: 16px;
+        margin-bottom: 6px;
+        line-height: 0;
+    }
+}
+
+@media (max-width: 750px){
+    .planet-info-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0;
+    }.planet-info h1{
+        font-size: 40px;
+        letter-spacing: 0;
+        line-height: 40px;
+        margin-bottom: 16px;
+    }.planet-info p{
+        margin-top:0;
+    }#planet-container{
+        margin-bottom: 28px;
+    }
+    .planet-button-container{
+        display: none;
+    }.planet-learn-container{
+        flex-direction: column;
+    }.planet-item{
+        width: 88%;
+        height: 48px;
+        margin-right: 0;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:  0 24px;
+    }#planet-temp{
+        margin-right: 0;
+    }.planet-item h4{
+        font-size: 11px;
+        margin-left: 0;
+    }.planet-item h2{
+        margin: 0;
+        margin-left: 23px;
+        font-size: 20px;
+    }.planet-source{
+        margin-bottom: 0;
+    }
+    .img-planet{
+        height: 304px;
+    }.img-planet img{
+        transform: scale(0.4);
+    }.geology-planet{
+        transform: scale(0.5);
+        bottom: -90px;
+        z-index: ;
+    }
+
+    .planet-button-navbar-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 7%;
+        width: 86%;
+        height: 50px;
+        border-bottom: 1px solid #393950;
+    }.button-navbar-item{
+        font-family: 'League Spartan', sans-serif;;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.93px;
+        font-size: 9px;
+        height: 47px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+        border-bottom: 4px solid black;
+    }.button-navbar-item span{
+        opacity: 1;
+    }.planet-button-navbar-container .transparent{
+        opacity: 0.5 !important;
+    }
+
+    .menu-dropdown-container{
+        display: flex;
+        flex-direction: column;
+        padding: 25px 7% 45px 7%;
+        background-color: #070724;
+        width: 86%;
+        height: 90%;
+
+        position: absolute;
+        z-index: 3;
+    }.menu-dropdown-item, 
+    .menu-dropdown-subitem-1,
+    .menu-dropdown-subitem-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+    }.menu-dropdown-item{
+        border-bottom: 1px solid #20203a;
+    }.menu-dropdown-item .color{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        margin-right: 24px;
+    }.menu-dropdown-title{
+        font-size: 15px;
+        letter-spacing: 1.36px;
+        line-height: 25px;
+        text-transform: uppercase;
+    }
+    #menu-dropdown-item-Neptune{
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+
+  background-image: url('./assets/background-stars.svg');
+  background-color: #070724;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1{
+  font-family: 'Antonio', sans-serif;
+  font-weight: medium;
+  font-size: 80px;
+  line-height: 103px;
+}h2{
+  font-family: 'Antonio', sans-serif;
+  font-weight: medium;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+}h3{
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.6px;
+}h4{
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
