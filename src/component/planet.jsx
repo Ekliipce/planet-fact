@@ -36,28 +36,45 @@ function PlanetContainer(props){
         return elm.name.toLocaleLowerCase() === props.planet.toLocaleLowerCase()
     })
     
-    
+    const showOverview = () => {
+        setView('overview')
+        setImg(props.img[0])
+        setColor1(props.color)
+        setColor2('transparent')
+        setColor3('transparent')
+    }
+    const showStructure = () => {
+        setView('structure')
+        setImg(props.img[1])
+        setColor1('transparent')
+        setColor2(props.color)
+        setColor3('transparent')
+    }
+    const showGeology = () => {
+        setView('geology')
+        setImg(props.img[0])
+        setColor1('transparent')
+        setColor2('transparent')
+        setColor3(props.color)
+    }
+
     const handleClick = (e) => {
         const elm = e.target.innerText.toLocaleLowerCase()
-        if (elm.includes('01') || elm.includes("overview")){
-            setView('overview')
-            setImg(props.img[0])
-            setColor1(props.color)
-            setColor2('transparent')
-            setColor3('transparent')
-        }else if(elm.includes('02') || elm.includes("structure")){
-            setView('structure')
-            setImg(props.img[1])
-            setColor1('transparent')
-            setColor2(props.color)
-            setColor3('transparent')
-        }else{
-            setView('geology')
-            setImg(props.img[0])
-            setColor1('transparent')
-            setColor2('transparent')
-            setColor3(props.color)
-        }
+        if (elm.includes('01') || elm.includes("overview"))
+            showOverview()
+        else if(elm.includes('02') || elm.includes("structure"))
+            showStructure()
+        else
+            showGeology()
+    }
+
+    const handleClickPlanet = () => {
+        if (view === 'overview')
+            showStructure()
+        else if (view === 'structure')
+            showGeology()
+        else
+            showOverview()
     }
  
     return <><div className='planet-button-navbar-container'>
@@ -76,7 +93,7 @@ function PlanetContainer(props){
     </div> 
     <div id='planet-container'>
         <div className='img-planet'>
-            <img src={img} alt={props.planet} class='img-planet-img'/>
+            <img src={img} alt={props.planet} class={`img-planet-${view} img-planet-img`} onClick={handleClickPlanet}/>
             <img src={props.img[2]} className={`${view} geology-planet`}/>
         </div>
 
@@ -134,5 +151,8 @@ export function Planet(props){
         <Navbar/>
         <PlanetContainer planet={props.planet} color={color} img={img}/>
         <PlanetLearn planet={props.planet}/>
+        <footer>
+            <span>Fully developed by Charles-André Arsenec. </span>
+        </footer>
     </>
 }
